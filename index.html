@@ -1,0 +1,130 @@
+<!doctype html><html><head><meta http-equiv="refresh" content="0;url=main.html">
+
+
+
+<style id="nirmaly-final-checkout-css">
+html:not(.dark) body{background:#fefaed!important;color:#3e2723!important}
+html:not(.dark) body header{background:linear-gradient(to right,#8B4513,#A0522D,#8B4513)!important;color:#fff!important}
+html:not(.dark) body .nd-contact-bar{background:#f5ebe0!important;color:#3e2723!important}
+html.dark body{background:#0d1b2a!important;color:#fefbe9!important}
+.nirmaly-cart-badge{position:absolute!important;top:-8px!important;right:-7px!important;display:none;min-width:21px!important;height:21px!important;padding:0 6px!important;align-items:center!important;justify-content:center!important;border-radius:50px!important;background:#e85d2a!important;color:#fff!important;border:2px solid #0d1b2a!important;font:800 11px/17px Arial,sans-serif!important;box-shadow:0 3px 10px rgba(0,0,0,.3)!important;pointer-events:none!important}
+.nirmaly-cart-link{position:relative!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;z-index:10000!important}
+.nirmaly-cart-toast{position:fixed!important;top:84px!important;right:22px!important;z-index:999999!important;padding:12px 18px!important;border-radius:12px!important;background:#1f914d!important;color:#fff!important;font:700 14px/1.25 Arial,sans-serif!important;box-shadow:0 10px 30px rgba(0,0,0,.28)!important}
+.nirmaly-cart-page{max-width:1120px;margin:0 auto;padding:55px 20px 100px}.nirmaly-cart-page h1{text-align:center;font-size:clamp(2rem,5vw,3.2rem)}
+.nirmaly-cart-list{display:grid;gap:14px}.nirmaly-cart-row{display:flex;gap:18px;align-items:center;padding:18px;border-radius:18px;background:#fff;border:1px solid rgba(80,70,50,.12);box-shadow:0 7px 24px rgba(0,0,0,.07)}
+.nirmaly-cart-row img{width:82px;height:82px;object-fit:cover;border-radius:12px}.nirmaly-cart-info{flex:1;min-width:180px}.nirmaly-cart-info strong{display:block;font-size:18px;margin-bottom:6px}.nirmaly-cart-meta{opacity:.72}
+.nirmaly-cart-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.nirmaly-qty{display:flex;align-items:center;gap:10px;border:1px solid #ccc;border-radius:10px;padding:5px 8px}.nirmaly-qty button{width:30px;height:30px;border:0;border-radius:7px;cursor:pointer}
+.nirmaly-remove,.nirmaly-checkout-btn{border:0;border-radius:10px;padding:10px 15px;cursor:pointer;font-weight:700}.nirmaly-checkout-btn{background:#c95d37;color:#fff!important;text-decoration:none!important;display:inline-block}
+.nirmaly-cart-summary{margin-top:24px;padding:22px;border-radius:18px;background:rgba(212,175,55,.12);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.nirmaly-cart-total{font-size:24px;font-weight:800}
+.nirmaly-cart-empty{text-align:center;padding:55px 20px;border-radius:18px;background:rgba(255,255,255,.72)}.nirmaly-cart-shop{display:inline-block;padding:12px 22px;border-radius:999px;background:#c95d37;color:#fff!important;text-decoration:none!important;font-weight:700}
+.nirmaly-checkout-wrap{max-width:1000px;margin:0 auto;padding:50px 18px 90px}.nirmaly-checkout-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.nirmaly-checkout-card{background:#fff;border-radius:20px;padding:24px;box-shadow:0 8px 28px rgba(0,0,0,.08);color:#3e2723}.nirmaly-checkout-field{display:grid;gap:7px;margin:14px 0}.nirmaly-checkout-field label{font-weight:700}
+.nirmaly-checkout-field input,.nirmaly-checkout-field textarea{width:100%;box-sizing:border-box;padding:12px 13px;border:1px solid #cfcfcf;border-radius:10px;font:inherit;background:#fff;color:#3e2723}.nirmaly-checkout-field textarea{min-height:100px}
+.nirmaly-order-item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #ddd}.nirmaly-order-total{font-size:21px;font-weight:800;margin-top:15px;display:flex;justify-content:space-between}
+.nirmaly-whatsapp-btn{width:100%;margin-top:20px;padding:14px 18px;border:0;border-radius:12px;cursor:pointer;background:#1fa855;color:#fff;font-weight:800;font-size:16px}
+html.dark .nirmaly-checkout-card{background:#172638!important;color:#eef3f8!important}html.dark .nirmaly-checkout-field input,html.dark .nirmaly-checkout-field textarea{background:#0f1d2d!important;color:#fff!important;border-color:#465c75!important}html.dark .nirmaly-order-item{border-color:#3b4e64!important}
+@media(max-width:767px){.nirmaly-cart-toast{left:12px;right:12px;top:72px;text-align:center}.nirmaly-cart-page,.nirmaly-checkout-wrap{padding:35px 12px 70px}.nirmaly-cart-row{align-items:flex-start;flex-wrap:wrap}.nirmaly-cart-row img{width:70px;height:70px}.nirmaly-cart-info{min-width:calc(100% - 90px)}.nirmaly-cart-actions{width:100%;justify-content:space-between}.nirmaly-cart-summary{align-items:stretch;flex-direction:column}.nirmaly-checkout-grid{grid-template-columns:1fr}}
+</style>
+
+<style id="nirmaly-final-ui-css">
+/* FINAL UI FIX: visible Add to Cart + real sun/moon switch */
+.nirmaly-visible-add-cart{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:44px!important;padding:10px 18px!important;border-radius:999px!important;background:#c75b39!important;color:#fff!important;font-weight:800!important;cursor:pointer!important;box-shadow:0 6px 18px rgba(199,91,57,.22)!important;transition:transform .2s ease,box-shadow .2s ease,background .2s ease!important}
+.nirmaly-visible-add-cart:hover{transform:translateY(-2px) scale(1.02)!important;background:#b84e30!important;box-shadow:0 10px 24px rgba(199,91,57,.30)!important}
+.dark .nirmaly-visible-add-cart{background:#d4af37!important;color:#0d1b2a!important}.dark .nirmaly-visible-add-cart:hover{background:#e2c45b!important}
+.nirmaly-theme-icon{display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:20px!important;line-height:1!important;width:22px!important;height:22px!important;transition:transform .25s ease!important}
+.nirmaly-theme-icon.pop{transform:rotate(25deg) scale(1.18)!important}
+</style>
+
+<style id="nirmaly-requested-final-css">
+.nirmaly-theme-icon{font-size:21px;line-height:1;display:inline-block;transition:transform .25s ease}
+.nirmaly-add-cart-final{display:block!important;width:100%!important;margin-top:9px!important;padding:10px 14px!important;border:1px solid rgba(212,175,55,.75)!important;border-radius:10px!important;background:transparent!important;color:inherit!important;font-weight:800!important;letter-spacing:.2px!important;cursor:pointer!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease!important}
+.nirmaly-add-cart-final:hover{transform:translateY(-2px)!important;background:rgba(212,175,55,.16)!important;box-shadow:0 7px 18px rgba(0,0,0,.18)!important}
+.nirmaly-add-cart-final:active{transform:translateY(0)!important}
+</style>
+</head><body>
+
+
+
+<script id="nirmaly-final-checkout-js">
+(function(){
+"use strict";
+const CART_KEY="nirmalyDairyCart",THEME_KEY="nirmalyTheme";
+function getCart(){try{let x=JSON.parse(localStorage.getItem(CART_KEY)||"[]");return Array.isArray(x)?x:[]}catch(e){return[]}}
+function saveCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c))}
+function cartCount(){return getCart().reduce((n,x)=>n+Math.max(1,Number(x.qty)||1),0)}
+function price(v){let n=parseFloat(String(v||"").replace(/[^0-9.]/g,""));return Number.isFinite(n)?n:0}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function toast(t){document.querySelectorAll(".nirmaly-cart-toast").forEach(x=>x.remove());let x=document.createElement("div");x.className="nirmaly-cart-toast";x.textContent=t;document.body.appendChild(x);setTimeout(()=>x.remove(),1800)}
+function updateCart(){let n=cartCount();document.querySelectorAll(".nirmaly-cart-badge").forEach(b=>{b.textContent=n;b.style.display=n?"inline-flex":"none"});document.querySelectorAll("a[href*='cart.html']").forEach(a=>a.setAttribute("aria-label","Cart with "+n+" items"))}
+function setupCart(){document.querySelectorAll("a[href*='cart.html']").forEach(a=>{a.classList.add("nirmaly-cart-link");if(!a.querySelector(".nirmaly-cart-badge")){let b=document.createElement("span");b.className="nirmaly-cart-badge";a.appendChild(b)}});updateCart()}
+function productData(btn){let c=btn.closest(".product-card,.product,.card,article,[data-product],.shop-card,.product-item,.group")||btn.parentElement,txt=e=>(e?.textContent||"").replace(/\s+/g," ").trim();return{name:btn.dataset.productName||btn.dataset.product||c?.dataset.productName||c?.dataset.name||txt(c?.querySelector("h1,h2,h3,h4,.product-title,.title"))||"Nirmaly Dairy Product",price:btn.dataset.price||c?.dataset.price||txt(c?.querySelector(".price,.product-price,.amount,[class*='price']"))||"",image:btn.dataset.image||c?.querySelector("img")?.getAttribute("src")||""}}
+function isAdd(btn){let t=(btn.textContent||"").toLowerCase().replace(/\s+/g," ").trim(),a=(btn.getAttribute("aria-label")||"").toLowerCase(),title=(btn.getAttribute("title")||"").toLowerCase(),cl=(btn.className||"").toString().toLowerCase(),attrs=Array.from(btn.attributes||[]).map(x=>(x.name+"="+x.value).toLowerCase()).join(" ");return cl.includes("add-to-cart")||cl.includes("addtocart")||cl.includes("add-cart")||attrs.includes("add-to-cart")||attrs.includes("addtocart")||/\badd\s*to\s*cart\b/.test(t)||/\badd\s*to\s*cart\b/.test(a)||/\badd\s*to\s*cart\b/.test(title)}
+function wireAdd(){if(document.documentElement.dataset.nirmalyCartWired==="1")return;document.documentElement.dataset.nirmalyCartWired="1";document.addEventListener("click",function(e){let b=e.target.closest("button,a,[role='button']");if(!b||!isAdd(b))return;e.preventDefault();e.stopImmediatePropagation();let p=productData(b),c=getCart(),key=p.name+"|"+p.price,old=c.find(x=>x.name+"|"+x.price===key);if(old)old.qty=(Number(old.qty)||1)+1;else c.push({...p,qty:1});saveCart(c);updateCart();toast("Item Added • "+cartCount());let oldHtml=b.innerHTML;b.innerHTML="✓ Item Added";setTimeout(()=>b.innerHTML=oldHtml,1100)},true)}
+function applyTheme(){let dark=localStorage.getItem(THEME_KEY)!=="light";document.documentElement.classList.toggle("dark",dark);document.documentElement.style.colorScheme=dark?"dark":"light";let b=Array.from(document.querySelectorAll("button")).find(x=>/switch to (light|dark) mode/i.test(x.getAttribute("aria-label")||""));if(b){b.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");b.title=dark?"Switch to light mode":"Switch to dark mode";let inner=b.querySelector(".relative.z-10");if(inner)inner.style.transform=dark?"rotate(0deg)":"rotate(180deg)"}}
+function theme(){let b=Array.from(document.querySelectorAll("button")).find(x=>/switch to (light|dark) mode/i.test(x.getAttribute("aria-label")||""));if(!b)return;if(b.dataset.nirmalyThemeWired==="1"){applyTheme();return}b.dataset.nirmalyThemeWired="1";b.addEventListener("click",function(e){e.preventDefault();e.stopImmediatePropagation();let d=document.documentElement.classList.contains("dark");localStorage.setItem(THEME_KEY,d?"light":"dark");applyTheme()},true);applyTheme()}
+function renderCart(){let host=document.getElementById("nirmaly-cart-root");if(!host)return;let c=getCart();if(!c.length){host.innerHTML='<div class="nirmaly-cart-empty"><h2>Your Cart is Empty</h2><p>Add products from the Shop and they will appear here.</p><a class="nirmaly-cart-shop" href="products.html">Continue Shopping</a></div>';return}let total=0,rows=c.map((x,i)=>{let q=Math.max(1,Number(x.qty)||1),p=price(x.price);total+=p*q;return'<div class="nirmaly-cart-row">'+(x.image?'<img src="'+esc(x.image)+'" alt="">':'')+'<div class="nirmaly-cart-info"><strong>'+esc(x.name)+'</strong><div class="nirmaly-cart-meta">'+esc(x.price||"Price not specified")+'</div></div><div class="nirmaly-cart-actions"><div class="nirmaly-qty"><button type="button" data-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-plus="'+i+'">+</button></div><button type="button" class="nirmaly-remove" data-remove="'+i+'">Remove</button></div></div>'}).join("");host.innerHTML='<div class="nirmaly-cart-list">'+rows+'</div><div class="nirmaly-cart-summary"><div class="nirmaly-cart-total">Total: ₹'+total.toFixed(2)+'</div><div><button type="button" class="nirmaly-remove" id="nirmaly-clear">Clear Cart</button> <a class="nirmaly-cart-shop" href="products.html">Continue Shopping</a> <a class="nirmaly-checkout-btn" href="checkout.html">Proceed to Checkout</a></div></div>';host.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>{let a=getCart(),i=+b.dataset.plus;a[i].qty=(Number(a[i].qty)||1)+1;saveCart(a);renderCart();updateCart()});host.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>{let a=getCart(),i=+b.dataset.minus;a[i].qty=Math.max(1,(Number(a[i].qty)||1)-1);saveCart(a);renderCart();updateCart()});host.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{let a=getCart();a.splice(+b.dataset.remove,1);saveCart(a);renderCart();updateCart()});let clear=host.querySelector("#nirmaly-clear");if(clear)clear.onclick=()=>{localStorage.removeItem(CART_KEY);renderCart();updateCart()}}
+function renderCheckout(){let host=document.getElementById("nirmaly-checkout-root");if(!host)return;let c=getCart();if(!c.length){host.innerHTML='<div class="nirmaly-cart-empty"><h2>Your Cart is Empty</h2><p>Please add a product before checkout.</p><a class="nirmaly-cart-shop" href="products.html">Shop Products</a></div>';return}let total=0,items=c.map(x=>{let q=Math.max(1,Number(x.qty)||1),p=price(x.price);total+=p*q;return{...x,qty:q,line:p*q}});host.innerHTML='<div class="nirmaly-checkout-grid"><div class="nirmaly-checkout-card"><h2>Delivery Details</h2><div class="nirmaly-checkout-field"><label>Name</label><input id="co-name" required placeholder="Your name"></div><div class="nirmaly-checkout-field"><label>Mobile Number</label><input id="co-phone" required inputmode="tel" placeholder="10-digit mobile number"></div><div class="nirmaly-checkout-field"><label>Address</label><textarea id="co-address" required placeholder="Delivery address"></textarea></div><button class="nirmaly-whatsapp-btn" id="co-whatsapp" type="button">Order on WhatsApp</button></div><div class="nirmaly-checkout-card"><h2>Order Summary</h2>'+items.map(x=>'<div class="nirmaly-order-item"><span>'+esc(x.name)+' × '+x.qty+'</span><b>₹'+x.line.toFixed(2)+'</b></div>').join("")+'<div class="nirmaly-order-total"><span>Total</span><span>₹'+total.toFixed(2)+'</span></div></div></div>';document.getElementById("co-whatsapp").onclick=function(){let name=document.getElementById("co-name").value.trim(),phone=document.getElementById("co-phone").value.trim(),address=document.getElementById("co-address").value.trim();if(!name||!phone||!address){alert("Please fill Name, Mobile Number and Address.");return}let msg="Nirmaly Dairy Order\\n\\nName: "+name+"\\nMobile: "+phone+"\\nAddress: "+address+"\\n\\nProducts:\\n"+items.map(x=>x.name+" x "+x.qty+" = ₹"+x.line.toFixed(2)).join("\\n")+"\\n\\nTotal: ₹"+total.toFixed(2);window.open("https://wa.me/919616219702?text="+encodeURIComponent(msg),"_blank")}}
+function boot(){setupCart();wireAdd();theme();renderCart();renderCheckout();updateCart()}document.addEventListener("DOMContentLoaded",boot);window.addEventListener("load",boot);
+})();
+</script>
+
+<script id="nirmaly-final-ui-js">
+(function(){
+'use strict';
+const CART_KEY='nirmalyDairyCart', THEME_KEY='nirmalyTheme';
+function getCart(){try{const x=JSON.parse(localStorage.getItem(CART_KEY)||'[]');return Array.isArray(x)?x:[]}catch(e){return[]}}
+function saveCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c))}
+function count(){return getCart().reduce((n,x)=>n+Math.max(1,Number(x.qty)||1),0)}
+function money(v){const n=parseFloat(String(v||'').replace(/[^0-9.]/g,''));return Number.isFinite(n)?n:0}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function toast(t){document.querySelectorAll('.nirmaly-cart-toast').forEach(x=>x.remove());const x=document.createElement('div');x.className='nirmaly-cart-toast';x.textContent=t;document.body.appendChild(x);setTimeout(()=>x.remove(),1800)}
+function badge(){const n=count();document.querySelectorAll('.nirmaly-cart-badge').forEach(b=>{b.textContent=n;b.style.display=n?'inline-flex':'none'})}
+function setupCart(){document.querySelectorAll("a[href*='cart.html']").forEach(a=>{a.classList.add('nirmaly-cart-link');if(!a.querySelector('.nirmaly-cart-badge')){const b=document.createElement('span');b.className='nirmaly-cart-badge';a.appendChild(b)}});badge()}
+function product(btn){let card=btn.closest('.product-card,.product,.card,article,[data-product],.shop-card,.product-item,.group')||btn.parentElement;const text=e=>(e?.textContent||'').replace(/\s+/g,' ').trim();return{name:btn.dataset.productName||btn.dataset.product||card?.dataset.productName||card?.dataset.name||text(card?.querySelector('h1,h2,h3,h4,.product-title,.title'))||'Nirmaly Dairy Product',price:btn.dataset.price||card?.dataset.price||text(card?.querySelector('.price,.product-price,.amount,[class*="price"]'))||'',image:btn.dataset.image||card?.querySelector('img')?.getAttribute('src')||''}}
+function addButton(btn){if(btn.dataset.nirmalyAddReady==='1')return;btn.dataset.nirmalyAddReady='1';btn.classList.add('nirmaly-visible-add-cart');btn.setAttribute('type','button');btn.setAttribute('aria-label','Add to cart');btn.innerHTML='<span aria-hidden="true">🛒</span><span>Add to Cart</span>';}
+function wireAdd(){document.querySelectorAll("button[title='Add to cart'],button[title='Add To Cart'],button[aria-label*='Add to cart' i],.add-to-cart,.addtocart").forEach(addButton);document.addEventListener('click',function(e){const b=e.target.closest('button[data-nirmaly-add-ready="1"]');if(!b)return;e.preventDefault();e.stopPropagation();const p=product(b),c=getCart(),key=p.name+'|'+p.price,old=c.find(x=>x.name+'|'+x.price===key);if(old)old.qty=(Number(old.qty)||1)+1;else c.push({...p,qty:1});saveCart(c);badge();toast('Item Added • '+count());b.innerHTML='<span>✓</span><span>Item Added</span>';setTimeout(()=>b.innerHTML='<span aria-hidden="true">🛒</span><span>Add to Cart</span>',1100)},true)}
+function themeButton(){return Array.from(document.querySelectorAll('button')).find(b=>/switch to (light|dark) mode/i.test(b.getAttribute('aria-label')||''))}
+function applyTheme(){const dark=localStorage.getItem(THEME_KEY)!=='light';document.documentElement.classList.toggle('dark',dark);document.documentElement.classList.toggle('light',!dark);document.documentElement.style.colorScheme=dark?'dark':'light';const b=themeButton();if(b){b.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');b.title=dark?'Switch to light mode':'Switch to dark mode';let icon=b.querySelector('.nirmaly-theme-icon');if(!icon){const old=b.querySelector('.relative.z-10')||b;icon=document.createElement('span');icon.className='nirmaly-theme-icon';if(old!==b)old.innerHTML='';(old===b?b:old).appendChild(icon)}icon.textContent=dark?'☀️':'🌙';icon.classList.remove('pop');void icon.offsetWidth;icon.classList.add('pop')}}
+function wireTheme(){const b=themeButton();if(!b)return;if(b.dataset.nirmalyThemeReady==='1'){applyTheme();return}b.dataset.nirmalyThemeReady='1';b.addEventListener('click',function(e){e.preventDefault();e.stopImmediatePropagation();const dark=document.documentElement.classList.contains('dark');localStorage.setItem(THEME_KEY,dark?'light':'dark');applyTheme()},true);applyTheme()}
+function cartPage(){const host=document.getElementById('nirmaly-cart-root');if(!host)return;const c=getCart();if(!c.length){host.innerHTML='<div class="nirmaly-cart-empty"><h2>Your Cart is Empty</h2><p>Add products from the Shop and they will appear here.</p><a class="nirmaly-cart-shop" href="products.html">Continue Shopping</a></div>';return}let total=0;const rows=c.map((x,i)=>{const q=Math.max(1,Number(x.qty)||1),p=money(x.price);total+=p*q;return '<div class="nirmaly-cart-row">'+(x.image?'<img src="'+esc(x.image)+'" alt="">':'')+'<div class="nirmaly-cart-info"><strong>'+esc(x.name)+'</strong><div class="nirmaly-cart-meta">'+esc(x.price||'Price not specified')+'</div></div><div class="nirmaly-cart-actions"><div class="nirmaly-qty"><button type="button" data-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-plus="'+i+'">+</button></div><button type="button" class="nirmaly-remove" data-remove="'+i+'">Remove</button></div></div>'}).join('');host.innerHTML='<div class="nirmaly-cart-list">'+rows+'</div><div class="nirmaly-cart-summary"><div class="nirmaly-cart-total">Total: ₹'+total.toFixed(2)+'</div><div><button type="button" class="nirmaly-remove" id="nirmaly-clear">Clear Cart</button> <a class="nirmaly-cart-shop" href="products.html">Continue Shopping</a> <a class="nirmaly-checkout-btn" href="checkout.html">Proceed to Checkout</a></div></div>';host.querySelectorAll('[data-plus]').forEach(b=>b.onclick=()=>{let a=getCart(),i=+b.dataset.plus;a[i].qty=(Number(a[i].qty)||1)+1;saveCart(a);cartPage();badge()});host.querySelectorAll('[data-minus]').forEach(b=>b.onclick=()=>{let a=getCart(),i=+b.dataset.minus;a[i].qty=Math.max(1,(Number(a[i].qty)||1)-1);saveCart(a);cartPage();badge()});host.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{let a=getCart();a.splice(+b.dataset.remove,1);saveCart(a);cartPage();badge()});host.querySelector('#nirmaly-clear')?.addEventListener('click',()=>{localStorage.removeItem(CART_KEY);cartPage();badge()})}
+function boot(){setupCart();wireAdd();wireTheme();cartPage();badge()}
+document.addEventListener('DOMContentLoaded',boot);window.addEventListener('load',boot);
+})();
+</script>
+
+<script id="nirmaly-requested-final-js">
+(function(){
+"use strict";
+const KEY="nirmalyTheme";
+function isDark(){return document.documentElement.classList.contains("dark")}
+function themeIcon(){document.querySelectorAll(".nirmaly-theme-icon").forEach(i=>i.textContent=isDark()?"☀️":"🌙")}
+function forceTheme(){let dark=localStorage.getItem(KEY)==="dark";document.documentElement.classList.toggle("dark",dark);document.documentElement.style.colorScheme=dark?"dark":"light";themeIcon()}
+function wireTheme(){
+ let b=[...document.querySelectorAll("button")].find(x=>{let s=((x.getAttribute("aria-label")||"")+" "+(x.getAttribute("title")||"")).toLowerCase();return s.includes("dark mode")||s.includes("light mode")});
+ if(!b)return;
+ if(!b.querySelector(".nirmaly-theme-icon"))b.innerHTML='<span class="nirmaly-theme-icon"></span>';
+ b.setAttribute("aria-label",isDark()?"Switch to light mode":"Switch to dark mode");
+ b.setAttribute("title",isDark()?"Switch to light mode":"Switch to dark mode");
+ if(b.dataset.nirmalyFinalTheme!=="1"){
+  b.dataset.nirmalyFinalTheme="1";
+  b.addEventListener("click",function(e){e.preventDefault();e.stopImmediatePropagation();localStorage.setItem(KEY,isDark()?"light":"dark");forceTheme();b.setAttribute("aria-label",isDark()?"Switch to light mode":"Switch to dark mode");b.setAttribute("title",isDark()?"Switch to light mode":"Switch to dark mode")},true);
+ }
+ themeIcon();
+}
+function addButtons(){
+ document.querySelectorAll("button,a,[role='button']").forEach(btn=>{
+  let text=(btn.textContent||"").replace(/\s+/g," ").trim().toLowerCase(),cl=(btn.className||"").toString().toLowerCase();
+  if(!/add\s*to\s*cart/.test(text)&&!cl.includes("add-to-cart")&&!cl.includes("addtocart"))return;
+  btn.classList.add("nirmaly-add-cart-final");
+  if(!/add\s*to\s*cart/.test(text))btn.innerHTML="Add to Cart";
+  let card=btn.closest(".product-card,.product,.card,article,[data-product],.shop-card,.product-item")||btn.parentElement;
+  if(!card)return;
+  let details=[...card.querySelectorAll("a,button,[role='button']")].find(x=>/view\s*details/i.test(x.textContent||""));
+  if(details&&btn!==details&&details.nextElementSibling!==btn)details.insertAdjacentElement("afterend",btn);
+ });
+}
+function boot(){forceTheme();wireTheme();addButtons()}
+document.addEventListener("DOMContentLoaded",boot);window.addEventListener("load",boot);setTimeout(boot,500);setTimeout(boot,1500);
+})();
+</script>
+</body></html>
