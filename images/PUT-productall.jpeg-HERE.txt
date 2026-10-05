@@ -1,0 +1,1 @@
+Place your productall.jpeg image in this images folder. All product images point to images/productall.jpeg
